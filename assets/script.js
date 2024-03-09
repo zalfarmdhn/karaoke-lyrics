@@ -2,14 +2,14 @@ const lyricText = document.getElementById('lyrics-text');
 const audio = document.getElementById('audio');
 
 const lyrics = [
-    { time: "15:06", text: 'Karena kamu aku rela menunggu semua' }, 
+    { time: "15:52", text: 'Karena kamu aku rela menunggu semua',}, 
     { time: "21:10", text: 'Sungguh berat yang ku rasa' }, 
-    { time: "23:04", text: 'Karena kamu aku tetap bertahan' }, 
-    { time: "27:03", text: 'Meskipun kini engkau di peluknya' }, 
+    { time: "23:20", text: 'Karena kamu aku tetap bertahan' }, 
+    { time: "27:04", text: 'Meskipun kini engkau di peluknya' }, 
     { time: "31:27", text: 'Masih mungkinkah semua abadi seperti dahulu' }, 
-    { time: "38:87", text: 'KARENAMU' }, 
-    { time: "39:60", text: 'SELALU' }, 
-    { time: "40:41", text: 'KARENAMU' }, 
+    { time: "38:81", text: 'KARENAMU' }, 
+    { time: "39:80", text: 'SELALU' }, 
+    { time: "40:85", text: 'KARENAMU' }, 
     { time: "42:04", text: 'KU CEMBURU...' },
     { time: "46:79", text: 'Teruslah melangkah melupakan dirinya' }, 
     { time: "50:18", text: 'Tinggalkan dia untukku sekarang' },
@@ -29,10 +29,12 @@ function milisecondsChanger(time) {
 
 function setTiming(lyrics) {
     lyricText.innerText = 'Enjoy the music!';
-    audio.setAttribute('hidden', true);
     for (const lyric of lyrics) {
         setTimeout(function() {
-            lyricText.innerText = `${lyric.text}`;
+            new Typed(lyricText, {
+                strings: [`${lyric.text}`],
+                showCursor: false,
+            });
         }, milisecondsChanger(lyric.time));
     }
 }

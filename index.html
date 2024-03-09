@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Timed Lyrics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
     <div class="lyrics-container">
         <h1>Geisha - Karena Kamu</h1>
         <audio controls id="audio" hidden>
             <source src="./assets/karenakamu.mp3" type="audio/mp3">
         </audio>
-        
+
         <div class="lyrics-card">
             <p id="lyrics-text">Press the play icon to start Karaoke!</p>
         </div>
@@ -25,7 +32,9 @@
             </button>
             <button class="btn next"><i class="ph-bold ph-skip-forward"></i></button>
         </div>
-    </div>
-    <script src="./assets/script.js"></script>
 </body>
+</div>
+<script src="./assets/script.js"></script>
+</body>
+
 </html>
